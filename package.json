@@ -1,12 +1,18 @@
 {
-  "name": "hooks",
+  "name": "kb-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "docker-clean": "docker rm kb-app --force",
+    "docker-build": "docker build -t kb-app .",
+    "docker-push": "bash docker-push.sh",
+    "docker-local": "docker run -p 2000:3000 -d kb-app",
+    "docker-run": "docker run -p 2000:3000 -d --name kb-app nglabs/kb-app",
+    "docker": "npm run docker-clean; npm run docker-build; npm run docker-push; npm run docker-run"
   },
   "dependencies": {
     "bootstrap": "^5.2.0",
@@ -16,7 +22,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "remark": "^14.0.2",
-    "remark-html": "^15.0.1"
+    "remark-html": "^15.0.1",
+    "sharp": "^0.30.7"
   },
   "devDependencies": {
     "eslint": "8.22.0",
