@@ -1,6 +1,7 @@
 // import {useState} from './React';
 import FlexSearch from 'flexsearch';
 import { useState } from 'react';
+import Link from 'next/link';
 import {getIndex} from '../../flexsearch/readIndex.mjs'
 
 
@@ -38,7 +39,7 @@ export default function Search(props)
 
     function formatResults()
     {
-        return results.map(res => <li key={res}>{res}</li>)
+        return results.map(res => <li key={res}> <Link href={`/posts/${res}`}>{res}</Link> </li>)
     }
 
 
