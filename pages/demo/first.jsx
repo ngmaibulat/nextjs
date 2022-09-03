@@ -52,7 +52,7 @@ export default function firstPost(props)
     </ul>
 
     <Image
-    src="/01.jpg" // Route of the image file
+    src="/img/01.jpg" // Route of the image file
     // height={300} // Desired size with correct aspect ratio
     // width={300} // Desired size with correct aspect ratio
 
