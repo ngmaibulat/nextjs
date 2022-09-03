@@ -34,6 +34,7 @@ export default function Home(props)
       <main className={styles.main}>
 
         <Link href="/demo/first">Page</Link>
+        <Link href="/static/test.html">Static</Link>
 
         <ul>
           {props.allPostsData.map(({ id, date, title }) => (
