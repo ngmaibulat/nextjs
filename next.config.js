@@ -12,7 +12,11 @@ const nextOptions = {
   swcMinify: true,
   experimental: {
     outputStandalone: true
-  }
+  },
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
 }
 
 const withPWA = nextpwa(pwaOptions);
