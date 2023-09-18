@@ -5,8 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+        @import url('/base.css');
+
+        .grid {
+            display: grid;
+            grid-template-areas:
+                "topbar topbar topbar" 
+                "leftmenu content rightmenu"
+                "footer footer footer";
+            
+            grid-template-columns: 1fr 3fr 1fr;
+            /* grid-template-rows: 50px auto 70px; */
+            grid-template-rows: 1fr 40fr 1fr;
+
+            gap: 0 50px;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .topbar {
+            grid-area: topbar;
+        }
+
+        .leftmenu {
+            grid-area: leftmenu;
+        }
+
+        .content {
+            grid-area: content;
+        }
+
+        .rightmenu {
+            grid-area: rightmenu;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+
+    </style>
 </head>
 <body>
-    <h3>Test HTML</h3>
+    <div class="grid">
+        <div class="topbar">TopBar</div>
+        <div class="leftmenu">LeftMenu</div><div class="content">Content</div><div class="rightmenu">RightMenu</div>
+        <div class="footer">Footer</div>
+    </div>
 </body>
 </html>

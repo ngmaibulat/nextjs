@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* :root {
+            --menu-color: white;
+        } */
+
+
+        @import url('/base.css');
+
+        @keyframes cardEntrance {
+            from {
+                opacity: 0;
+                transform: scale(0.3);
+                filter: hue-rotate(180deg);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+                filter: hue-rotate(0deg)
+            }
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: row;
+
+            justify-content: start;
+            gap: 1rem;
+
+            margin-bottom: 1rem;
+            background-color: black;
+            padding: 10px;
+            padding-left: 20px;
+            border-radius: 5px;
+            /* grid-template-columns: repeat(auto-3, 1fr); */
+        }
+
+        .grid-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
+            /* grid-template-columns: repeat(auto-fit, 1fr); */
+
+            justify-content: start;
+            gap: 1rem;
+
+            margin-bottom: 1rem;
+            background-color: black;
+            padding: 10px;
+            padding-left: 20px;
+            border-radius: 5px;
+        }
+        
+
+        .menu > div, .grid-menu > div  {
+            color: white
+        }
+
+        .menu > div:hover, .grid-menu > div:hover  {
+            color: red;
+        }
+        
+
+        .grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-auto-rows: 240px;
+        }
+
+        .card {
+            background-color: rgb(36, 243, 147);
+            animation: cardEntrance 700ms ease-out;
+            animation-fill-mode: backwards;
+        }
+
+        .c1 {
+            animation-delay: 300ms;
+        }
+
+        .c2 {
+            animation-delay: 600ms;
+        }
+
+        .c3 {
+            animation-delay: 900ms;
+        }
+
+        .c4 {
+            animation-delay: 1200ms;
+        }
+
+        .c5 {
+            animation-delay: 1500ms;
+        }
+
+        .c6 {
+            animation-delay: 1800ms;
+        }
+
+
+        @media screen and (min-width: 600px) {
+        
+            .card-tail {
+                grid-row: span 2 / auto;
+            }
+
+            .card-wide {
+                grid-column: span 2 / auto;
+            }
+        
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+        <div>Home</div>
+        <div>Contacts</div>
+        <div>About</div>
+    </div>
+
+    <div class="grid-menu">
+        <div>Home</div>
+        <div>Contacts</div>
+        <div>About</div>
+    </div>
+
+
+
+    <div class="grid">
+        <div class="card card-tail c1" style="background-image: url('https://images.unsplash.com/photo-1662286844552-81c31af1416c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80')">1</div>
+        <div class="card card-tail c2" style="background-image: url('https://images.unsplash.com/photo-1657664049378-c8aadfe323f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80')">2</div>
+        <div class="card card-wide c3" style="background-image: url('https://images.unsplash.com/photo-1662294850098-fd24ff1c021d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80')">3</div>
+        <div class="card c4" style="background-image: url('https://images.unsplash.com/photo-1662283804757-ef81acd5471e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1365&q=80')">4</div>
+        <div class="card c5" style="background-image: url('https://images.unsplash.com/photo-1662148393287-abc41a32a145?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80')">5</div>
+        <div class="card c6" style="background-image: url('https://images.unsplash.com/photo-1662204476672-a694f6245210?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=990&q=80')">6</div>
+        <div class="card">7</div>
+        <div class="card">8</div>
+        <div class="card">9</div>
+        <div class="card">10</div>
+        <div class="card">11</div>
+        <div class="card">12</div>
+    </div>
+
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.  
+    </div>
+</body>
+</html>
+

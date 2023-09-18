@@ -10,14 +10,17 @@ const pwaOptions = {
 const nextOptions = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {unoptimized: true},
   experimental: {
     outputStandalone: true
   },
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
+  // i18n: {
+  //   locales: ["en"],
+  //   defaultLocale: "en",
+  // },
 }
+
+nextOptions.images.unoptimized = true;
 
 const withPWA = nextpwa(pwaOptions);
 
